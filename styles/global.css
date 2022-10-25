@@ -33,28 +33,6 @@ img {
     color: black;
 }
 
-.rainbow-spin {
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
-    color: transparent;
-    font-size: 80px;
-    animation: loading 2s infinite;
-    animation-play-state: inherit;
-    position: fixed;
-    top: 70%;
-    left: 20%;
-    transform: translate3d(-50%, -50%, 0);
-    will-change: transform;
-}
-
-@keyframes loading {
-  0% {
-    transform: rotate(0deg)
-  }
-  100% {
-    transform: rotate(360deg)
-  }
-}
-
 body {
     /* fill screen so the background stripes actually fill */
     margin: 0;
