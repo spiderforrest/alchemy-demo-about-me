@@ -1,35 +1,50 @@
-:root {
-    --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
-    --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
-        'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+* {
+    --color1: #102820;
+    --color2: #3b643a;
+    --color3: #89a322;
+    --color4: #b8cc64;
+    --color5: #efee73;
+}
+h1 {
+    color: var(--color5);
+}
+
+a {
+    color: var(--color5);
+}
+
+a:hover {
+    color: var(--color3);
+}
+
+img {
+    border: 12px double var(--color3);
+}
+
+.right-align {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: black;
 }
 
 body {
-    font-family: var(--primary-font);
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    padding: 15px;
-    height: 80px;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-header .logo {
-    height: 100%;
-}
-
-main {
-    padding: 20px;
+    /* fill screen so the background stripes actually fill */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color1),
+        var(--color2) 20%,
+        var(--color1) 20%,
+        var(--color2) 40%
+    );
 }
